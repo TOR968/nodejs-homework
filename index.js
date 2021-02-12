@@ -1,18 +1,11 @@
-import {
-  listContacts,
-  //   getContactById,
-  //   removeContact,
-  //   addContact,
-} from "./contacts";
-
-// index.js
+const contacts = require("./contacts");
 const argv = require("yargs").argv;
 
 // TODO: рефакторить
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      listContacts;
+      contacts.listContacts();
       // ...
       break;
 
